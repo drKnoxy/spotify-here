@@ -10,7 +10,7 @@ chrome.browserAction.onClicked.addListener(function(tab) {
             // COMMENT
             getTrackDetails(resp.href, function(details){
                 console.log('details',details);
-                details.message = 'track-details';
+                details.message = 'replace-track';
                 chrome.tabs.sendMessage(tabs[0].id, details);
             });
         });

@@ -10,16 +10,17 @@
     "default_title": "hallo"
   },
   "content_scripts": [{
-    "matches": ["https://*/*"],
+    "matches": ["https://inbox.google.com/*"],
     "js": ["contentscript.js"]
   }],
   "background": {
-    "scripts": ["background.js"],
-    "persistent": false
+    "scripts": ["background.js"]
+    // "persistent": false
   },
   "permissions": [
     "activeTab",
-    // "webRequest",
+    "webRequest",
+    "webRequestBlocking",
     "https://open.spotify.com/"
   ]
 }
